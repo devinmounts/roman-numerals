@@ -3,7 +3,7 @@ function toRoman(number) {
   var roman = [];
   var remainderX;
 
-   
+
 
   if(number >= 1000 && number <= 3999) {
     for(var i = number / 1000; i >= 1; i--){
@@ -53,7 +53,6 @@ function toRoman(number) {
   }
 
   if(number < 40) {
-    console.log("in here");
     if(number > 10) {
       remainderX = number % 10;
     } else {
@@ -90,9 +89,6 @@ function toRoman(number) {
 }
 
 function encrypt(string) {
-
-var array = [4]
-
 
 }
 
