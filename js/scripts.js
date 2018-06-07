@@ -1,45 +1,72 @@
 
 function toRoman(number) {
   var roman = [];
-  var remainder;
+  var remainderX;
 
-  if(number > 10) {
-    remainder = number % 10;
-  } else {
-    remainder = number;
+
+  if(number >= 100 && number < 400) {
+    for(var i = number / 100; i >= 1; i--) {
+      roman.push("C")
+    }
+    number = number - 100;
+
   }
 
-  console.log(remainder)
-  console.log(number)
+  if(number >= 90 && number < 100) {
+    roman.push("XC")
+    number = number - 90;
+  }
 
-  if(number <=30 && number >10) {
-    // if(number % 10 === 0) {
-      for(var i = number / 10; i >= 1; i--) {
-        roman.push("X")
-      }
+  if(number >= 50 && number < 90) {
+    roman.push("L")
+    number = number - 50;
+  }
+
+  if(number >= 40 && number < 50) {
+    roman.push("XL")
+    number = number - 40;
+  }
+
+
+  if(number < 40) {
+
+    if(number > 10) {
+      remainderX = number % 10;
+    } else {
+      remainderX = number;
+    }
+
+    // if(number < 90 && number >=40){
+    //   if(number === 40) {
+    //     roman.push("XL")
+    //   }
     // }
-  }
-  if(remainder <= 5) {
-    if(remainder != 5) {
-      if(remainder != 4) {
-        for(var i = remainder; i > 0; i--) {
-          roman.push('I');
-        }
-      } else roman.push('IV');
-    } else roman.push('V');
-  }
-  if(remainder<=10 && remainder > 5) {
-    if(remainder != 10) {
-      if(remainder !=9) {
-        roman.push("V")
-        for (var i= remainder; i > 5; i--) {
-          roman.push("I");
-        }
-      }else roman.push("IX")
-    }else roman.push("X")
-  }
 
-
+    if(number < 40 && number >10) {
+        for(var i = number / 10; i >= 1; i--) {
+          roman.push("X")
+        }
+    }
+    if(remainderX <= 5) {
+      if(remainderX != 5) {
+        if(remainderX != 4) {
+          for(var i = remainderX; i > 0; i--) {
+            roman.push("I");
+          }
+        } else roman.push("IV");
+      } else roman.push("V");
+    }
+    if(remainderX<=10 && remainderX > 5) {
+      if(remainderX != 10) {
+        if(remainderX !=9) {
+          roman.push("V")
+          for (var i= remainderX; i > 5; i--) {
+            roman.push("I");
+          }
+        }else roman.push("IX")
+      }else roman.push("X")
+    }
+  }
 
   return roman.join("");
 }
@@ -48,10 +75,10 @@ function toRoman(number) {
 
 
 
-
-$(function(){
-
-
-
-
-})
+//
+// $(function(){
+//
+//
+//
+//
+// })
