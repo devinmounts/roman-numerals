@@ -3,6 +3,8 @@ function toRoman(number) {
   var roman = [];
   var remainderX;
 
+   
+
   if(number >= 1000 && number <= 3999) {
     for(var i = number / 1000; i >= 1; i--){
       roman.push("M");
@@ -50,7 +52,6 @@ function toRoman(number) {
     number = number - 40;
   }
 
-
   if(number < 40) {
     console.log("in here");
     if(number > 10) {
@@ -58,12 +59,6 @@ function toRoman(number) {
     } else {
       remainderX = number;
     }
-
-    // if(number < 90 && number >=40){
-    //   if(number === 40) {
-    //     roman.push("XL")
-    //   }
-    // }
 
     if(number < 40 && number >10) {
         for(var i = number / 10; i >= 1; i--) {
@@ -94,14 +89,23 @@ function toRoman(number) {
   return roman.join("");
 }
 
+function encrypt(string) {
+
+var array = [4]
+
+
+}
+
+
+
+$(function() {
+  $("#numerals").submit(function(event) {
+    event.preventDefault();
+    var userInput = parseInt($("#number").val());
+    $("#result").text(toRoman(userInput));
+  });
 
 
 
 
-//
-// $(function(){
-//
-//
-//
-//
-// })
+});

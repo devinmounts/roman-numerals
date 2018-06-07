@@ -12,8 +12,11 @@ This website is created with HTML, CSS and Javascript, enter in a number and det
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Determine if number less than four and place I for each number.** | User input Ex.: "3" | Output: III
-| ** Determine if number is equal to four.|
+| **Determine if number less than 4 and place I for each number.** | User input Ex.: "3" | Output: III|
+| ** Determine if number is equal to four.| Input: 4 | Output: IV|
+| ** Determine if number is equal to 5.| Input: 5 | Output: V|
+| ** Determine if number is less than 1.| Input:  | Output: V|
+
 ## Setup/Installation Requirements
 
 1. Clone repository from Git Hub using git clone in the terminal.
