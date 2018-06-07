@@ -3,12 +3,35 @@ function toRoman(number) {
   var roman = [];
   var remainderX;
 
+  if(number >= 1000 && number <= 3999) {
+    for(var i = number / 1000; i >= 1; i--){
+      roman.push("M");
+      number = number - 1000;
+    }
+  }
+
+  if(number >= 900 && number < 1000) {
+    roman.push("CM")
+    number = number - 900;
+  }
+
+  if(number >= 500 && number < 900) {
+    roman.push("D")
+    number -= 500;
+  }
+
+  if(number >= 400 && number < 500) {
+    roman.push("CD")
+    number = number - 400;
+  }
+
 
   if(number >= 100 && number < 400) {
+    var x = Number(number.toString().charAt(0))
     for(var i = number / 100; i >= 1; i--) {
       roman.push("C")
     }
-    number = number - 100;
+    number = number - (100 * x);
 
   }
 
@@ -29,7 +52,7 @@ function toRoman(number) {
 
 
   if(number < 40) {
-
+    console.log("in here");
     if(number > 10) {
       remainderX = number % 10;
     } else {
